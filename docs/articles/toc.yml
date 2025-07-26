@@ -2,7 +2,5 @@
 #
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 
-- name: Introduction
-  href: introduction.md
-- name: Getting Started
-  href: getting-started.md
+- name: Installation
+  href: installation.md

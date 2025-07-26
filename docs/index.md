@@ -2,10 +2,10 @@
 _layout: landing
 ---
 
-# This is the **HOMEPAGE**.
+# Sysexits.NET
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
+[Sysexits.NET] provides the system exit code constants as defined by
+[`<sysexits.h>`].
 
-## Quick Start Notes:
-
-1. Add images to the *images* folder if the file is referencing an image.
+[Sysexits.NET]: https://github.com/sorairolake/Sysexits.NET
+[`<sysexits.h>`]: https://man.openbsd.org/sysexits
