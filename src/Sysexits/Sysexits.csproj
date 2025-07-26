@@ -1,0 +1,30 @@
+﻿<!--
+SPDX-FileCopyrightText: 2025 Shun Sakai
+
+SPDX-License-Identifier: Apache-2.0 OR MIT
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Sysexits</PackageId>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>Shun Sakai</Authors>
+    <Description>The system exit codes as defined by &lt;sysexits.h&gt;</Description>
+    <Copyright>Copyright (c) 2025 Shun Sakai</Copyright>
+    <PackageLicenseExpression>Apache-2.0 OR MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/sorairolake/Sysexits.NET</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/sorairolake/Sysexits.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>
