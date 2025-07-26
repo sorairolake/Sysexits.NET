@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0 OR MIT
     <Description>The system exit codes as defined by &lt;sysexits.h&gt;</Description>
     <Copyright>Copyright (c) 2025 Shun Sakai</Copyright>
     <PackageLicenseExpression>Apache-2.0 OR MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/sorairolake/Sysexits.NET</PackageProjectUrl>
+    <PackageProjectUrl>https://sorairolake.github.io/Sysexits.NET/</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/sorairolake/Sysexits.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
