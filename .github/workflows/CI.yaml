@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2025 Shun Sakai
+#
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "develop"
+      - "master"
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os-alias:
+          - ubuntu
+          - macos
+          - windows
+        include:
+          - os-alias: ubuntu
+            os: ubuntu-24.04
+          - os-alias: macos
+            os: macos-14
+          - os-alias: windows
+            os: windows-2022
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup .NET environment
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+      - name: Build a project
+        run: dotnet build
+      - name: Run tests
+        run: dotnet test
+
+  fmt:
+    name: Format
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup .NET environment
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+      - name: Check code formatted
+        run: dotnet format --verify-no-changes
