@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E4A7D79F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sysexits.Tests", "tests\Sysexits.Tests\Sysexits.Tests.csproj", "{356CCCF5-A765-41C3-B97B-5F55F127BC1A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{DCC352C2-C2AC-46A6-B295-0F3EB141B8B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsUtf8", "examples\IsUtf8\IsUtf8.csproj", "{80511251-F0EC-42F5-A0A6-5B72622A0A65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +32,14 @@ Global
 		{356CCCF5-A765-41C3-B97B-5F55F127BC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356CCCF5-A765-41C3-B97B-5F55F127BC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356CCCF5-A765-41C3-B97B-5F55F127BC1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80511251-F0EC-42F5-A0A6-5B72622A0A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80511251-F0EC-42F5-A0A6-5B72622A0A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80511251-F0EC-42F5-A0A6-5B72622A0A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80511251-F0EC-42F5-A0A6-5B72622A0A65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BC03D8B7-A451-456A-B0EC-4225A56BA186} = {4870D2CB-1C50-4F0A-BEA2-5E5F94F13B74}
 		{356CCCF5-A765-41C3-B97B-5F55F127BC1A} = {E4A7D79F-4037-47B7-BB2F-DC4A304037D1}
+		{80511251-F0EC-42F5-A0A6-5B72622A0A65} = {DCC352C2-C2AC-46A6-B295-0F3EB141B8B3}
 	EndGlobalSection
 EndGlobal
