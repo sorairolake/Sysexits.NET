@@ -141,11 +141,15 @@ public static class ExitCodeExt
     /// Determines whether this system exit code represents successful
     /// termination.
     /// </summary>
+    /// <param name="code">The exit code to inspect.</param>
     /// <returns>
     /// <see langword="true"/> if this system exit code represents successful
     /// termination, <see langword="false"/> otherwise.
     /// </returns>
-    /// <param name="code">The exit code to inspect.</param>
+    /// <remarks>
+    /// This method determines whether the exit code is
+    /// <see cref="ExitCode.Ok"/>.
+    /// </remarks>
     public static bool IsSuccess(this ExitCode code) =>
         code == ExitCode.Ok;
 
@@ -153,11 +157,15 @@ public static class ExitCodeExt
     /// Determines whether this system exit code represents unsuccessful
     /// termination.
     /// </summary>
+    /// <param name="code">The exit code to inspect.</param>
     /// <returns>
     /// <see langword="true"/> if this system exit code represents unsuccessful
     /// termination, <see langword="false"/> otherwise.
     /// </returns>
-    /// <param name="code">The exit code to inspect.</param>
+    /// <remarks>
+    /// This method determines whether the exit code is not
+    /// <see cref="ExitCode.Ok"/>.
+    /// </remarks>
     public static bool IsFailure(this ExitCode code) =>
         !code.IsSuccess();
 
@@ -170,8 +178,9 @@ public static class ExitCodeExt
     /// </param>
     /// <exception cref="System.Security.SecurityException">
     /// The caller does not have sufficient security permission to perform this
-    /// function.
+    /// method.
     /// </exception>
+    /// <seealso cref="Environment.Exit"/>
     public static void Exit(this ExitCode code) =>
         Environment.Exit((int)code);
 }
