@@ -1,0 +1,24 @@
+<!--
+SPDX-FileCopyrightText: 2025 Shun Sakai
+
+SPDX-License-Identifier: Apache-2.0 OR MIT
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Sysexits\Sysexits.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta6.25358.103" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <AssemblyName>isutf8</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+</Project>
