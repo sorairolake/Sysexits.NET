@@ -23,6 +23,9 @@ jobs:
           - ubuntu
           - macos
           - windows
+        version-alias:
+          - minimum
+          - latest
         include:
           - os-alias: ubuntu
             os: ubuntu-24.04
@@ -30,13 +33,17 @@ jobs:
             os: macos-14
           - os-alias: windows
             os: windows-2022
+          - version-alias: minimum
+            version: "8.0.x"
+          - version-alias: latest
+            version: "9.0.x"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup .NET environment
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "9.0.x"
+          dotnet-version: ${{ matrix.version }}
       - name: Build a project
         run: dotnet build
       - name: Run tests
