@@ -150,8 +150,7 @@ public static class ExitCodeExt
     /// This method determines whether the exit code is
     /// <see cref="ExitCode.Ok"/>.
     /// </remarks>
-    public static bool IsSuccess(this ExitCode code) =>
-        code == ExitCode.Ok;
+    public static bool IsSuccess(this ExitCode code) => code == ExitCode.Ok;
 
     /// <summary>
     /// Determines whether this system exit code represents unsuccessful
@@ -166,8 +165,7 @@ public static class ExitCodeExt
     /// This method determines whether the exit code is not
     /// <see cref="ExitCode.Ok"/>.
     /// </remarks>
-    public static bool IsFailure(this ExitCode code) =>
-        !code.IsSuccess();
+    public static bool IsFailure(this ExitCode code) => !code.IsSuccess();
 
     /// <summary>
     /// Terminates the current process with the exit code defined by
@@ -181,6 +179,5 @@ public static class ExitCodeExt
     /// method.
     /// </exception>
     /// <seealso cref="Environment.Exit"/>
-    public static void Exit(this ExitCode code) =>
-        Environment.Exit((int)code);
+    public static void Exit(this ExitCode code) => Environment.Exit((int)code);
 }

@@ -32,11 +32,9 @@ jobs:
             os: windows-2022
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup .NET environment
         uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "9.0.x"
       - name: Build a project
         run: dotnet build
       - name: Run tests
@@ -47,10 +45,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup .NET environment
         uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "9.0.x"
       - name: Check code formatted
         run: dotnet format --verify-no-changes

@@ -25,13 +25,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Setup .NET environment
         uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "9.0.x"
       - name: Update DocFX
         run: dotnet tool update -g docfx
       - name: Build the documentation
