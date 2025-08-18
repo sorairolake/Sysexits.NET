@@ -28,16 +28,13 @@ public class UnitTest
     }
 
     [Fact]
-    public void Base() =>
-        Assert.Equal(ExitCode.Usage, ExitCode.Base);
+    public void Base() => Assert.Equal(ExitCode.Usage, ExitCode.Base);
 
     [Fact]
-    public void Max() =>
-        Assert.Equal(ExitCode.Config, ExitCode.Max);
+    public void Max() => Assert.Equal(ExitCode.Config, ExitCode.Max);
 
     [Fact]
-    public void IsSuccessForSuccessfulTermination() =>
-        Assert.True(ExitCode.Ok.IsSuccess());
+    public void IsSuccessForSuccessfulTermination() => Assert.True(ExitCode.Ok.IsSuccess());
 
     [Fact]
     public void IsSuccessForUnsuccessfulTermination()
@@ -60,8 +57,7 @@ public class UnitTest
     }
 
     [Fact]
-    public void IsFailureForSuccessfulTermination() =>
-        Assert.False(ExitCode.Ok.IsFailure());
+    public void IsFailureForSuccessfulTermination() => Assert.False(ExitCode.Ok.IsFailure());
 
     [Fact]
     public void IsFailureForUnsuccessfulTermination()
