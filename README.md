@@ -39,6 +39,10 @@ Please see [CHANGELOG.adoc].
 
 Please see [CONTRIBUTING.adoc].
 
+## Similar projects
+
+Please see <https://github.com/sorairolake/awesome-sysexits>.
+
 ## License
 
 Copyright (C) 2025 Shun Sakai (see [AUTHORS.adoc])
