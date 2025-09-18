@@ -48,5 +48,18 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup .NET environment
         uses: actions/setup-dotnet@v4
-      - name: Check code formatted
+      - name: Run formatter in check mode
         run: dotnet format --verify-no-changes
+
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Run formatter in check mode
+        run: npx prettier -c "**.{json,md,yaml,yml}"
