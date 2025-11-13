@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0 OR MIT
   <PropertyGroup>
     <AssemblyName>isutf8</AssemblyName>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
