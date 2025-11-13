@@ -1,0 +1,17 @@
+<!--
+SPDX-FileCopyrightText: 2025 Shun Sakai
+
+SPDX-License-Identifier: Apache-2.0 OR MIT
+-->
+
+<Solution>
+  <Folder Name="/examples/">
+    <Project Path="examples/IsUtf8/IsUtf8.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Sysexits/Sysexits.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Sysexits.Tests/Sysexits.Tests.csproj" />
+  </Folder>
+</Solution>
