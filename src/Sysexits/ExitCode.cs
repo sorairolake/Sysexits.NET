@@ -137,47 +137,50 @@ public enum ExitCode : byte
 /// </summary>
 public static class ExitCodeExt
 {
-    /// <summary>
-    /// Determines whether this system exit code represents successful
-    /// termination.
-    /// </summary>
-    /// <param name="code">The exit code to inspect.</param>
-    /// <returns>
-    /// <see langword="true"/> if this system exit code represents successful
-    /// termination, <see langword="false"/> otherwise.
-    /// </returns>
-    /// <remarks>
-    /// This method determines whether the exit code is
-    /// <see cref="ExitCode.Ok"/>.
-    /// </remarks>
-    public static bool IsSuccess(this ExitCode code) => code == ExitCode.Ok;
+    extension(ExitCode code)
+    {
+        /// <summary>
+        /// Determines whether this system exit code represents successful
+        /// termination.
+        /// </summary>
+        /// <param name="code">The exit code to inspect.</param>
+        /// <returns>
+        /// <see langword="true"/> if this system exit code represents
+        /// successful termination, <see langword="false"/> otherwise.
+        /// </returns>
+        /// <remarks>
+        /// This method determines whether the exit code is
+        /// <see cref="ExitCode.Ok"/>.
+        /// </remarks>
+        public bool IsSuccess() => code == ExitCode.Ok;
 
-    /// <summary>
-    /// Determines whether this system exit code represents unsuccessful
-    /// termination.
-    /// </summary>
-    /// <param name="code">The exit code to inspect.</param>
-    /// <returns>
-    /// <see langword="true"/> if this system exit code represents unsuccessful
-    /// termination, <see langword="false"/> otherwise.
-    /// </returns>
-    /// <remarks>
-    /// This method determines whether the exit code is not
-    /// <see cref="ExitCode.Ok"/>.
-    /// </remarks>
-    public static bool IsFailure(this ExitCode code) => !code.IsSuccess();
+        /// <summary>
+        /// Determines whether this system exit code represents unsuccessful
+        /// termination.
+        /// </summary>
+        /// <param name="code">The exit code to inspect.</param>
+        /// <returns>
+        /// <see langword="true"/> if this system exit code represents
+        /// unsuccessful termination, <see langword="false"/> otherwise.
+        /// </returns>
+        /// <remarks>
+        /// This method determines whether the exit code is not
+        /// <see cref="ExitCode.Ok"/>.
+        /// </remarks>
+        public bool IsFailure() => !code.IsSuccess();
 
-    /// <summary>
-    /// Terminates the current process with the exit code defined by
-    /// <c>ExitCode</c>.
-    /// </summary>
-    /// <param name="code">
-    /// The exit code to return to the operating system.
-    /// </param>
-    /// <exception cref="System.Security.SecurityException">
-    /// The caller does not have sufficient security permission to perform this
-    /// method.
-    /// </exception>
-    /// <seealso cref="Environment.Exit"/>
-    public static void Exit(this ExitCode code) => Environment.Exit((int)code);
+        /// <summary>
+        /// Terminates the current process with the exit code defined by
+        /// <c>ExitCode</c>.
+        /// </summary>
+        /// <param name="code">
+        /// The exit code to return to the operating system.
+        /// </param>
+        /// <exception cref="System.Security.SecurityException">
+        /// The caller does not have sufficient security permission to perform
+        /// this method.
+        /// </exception>
+        /// <seealso cref="Environment.Exit"/>
+        public void Exit() => Environment.Exit((int)code);
+    }
 }
