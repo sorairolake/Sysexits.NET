@@ -26,6 +26,10 @@ dotnet package add Sysexits
 
 See the [documentation][docs-url] for more details.
 
+## Examples
+
+Please see the [examples] directory for examples of using this library.
+
 ## Source code
 
 The upstream repository is available at
@@ -61,6 +65,7 @@ licensing information.
 [`<sysexits.h>`]: https://man.openbsd.org/sysexits
 [sysexits-rs]: https://crates.io/crates/sysexits
 [docs-url]: https://sorairolake.github.io/Sysexits.NET/
+[examples]: examples
 [CHANGELOG.adoc]: CHANGELOG.adoc
 [CONTRIBUTING.adoc]: CONTRIBUTING.adoc
 [AUTHORS.adoc]: AUTHORS.adoc
