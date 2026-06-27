@@ -29,7 +29,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Setup .NET environment
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v5.3.0
       - name: Update DocFX
         run: dotnet tool update -g docfx
       - name: Build the documentation
